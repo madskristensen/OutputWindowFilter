@@ -11,7 +11,9 @@ or get the [CI build][vsixgallery].
 
 --------------------------------------
 
-Coming soon...
+Adds a filter textbox to the Output Window that lets you filter the output based on text matches and regular expressions
+
+![screenshot](art/screenshot.gif)
 
 ## How can I help?
 If you enjoy using the extension, please give it a ★★★★★ rating on the [Visual Studio Marketplace][marketplace].

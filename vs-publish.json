@@ -6,7 +6,10 @@
     "tags": [ "outputwindow", "filter", "output" ]
   },
   "assetFiles": [
-
+    {
+      "pathOnDisk": "art/screenshot.gif",
+      "targetPath": "art/screenshot.gif"
+    }
   ],
   "overview": "README.md",
   "publisher": "MadsKristensen",
