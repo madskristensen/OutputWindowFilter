@@ -3,7 +3,8 @@
   <Metadata>
     <Identity Id="OutputWindowFilter.daaf649c-5187-405c-bff8-e0dd79f30573" Version="1.0.101" Language="en-US" Publisher="Mads Kristensen" />
     <DisplayName>Output Window Filter</DisplayName>
-    <Description xml:space="preserve">Empty VSIX Project.</Description>
+    <Description xml:space="preserve">Adds a filter textbox to the Output Window that lets you filter the output based on text matches and regular expressions</Description>
+    <MoreInfo>https://github.com/madskristensen/OutputWindowFilter</MoreInfo>
     <License>Resources\LICENSE</License>
     <Icon>Resources\Icon.png</Icon>
     <PreviewImage>Resources\Icon.png</PreviewImage>

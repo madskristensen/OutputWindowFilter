@@ -9,7 +9,7 @@ namespace OutputWindowFilter
     {
         public const string Id = "OutputWindowFilter.daaf649c-5187-405c-bff8-e0dd79f30573";
         public const string Name = "Output Window Filter";
-        public const string Description = @"Empty VSIX Project.";
+        public const string Description = @"Adds a filter textbox to the Output Window that lets you filter the output based on text matches and regular expressions";
         public const string Language = "en-US";
         public const string Version = "1.0.101";
         public const string Author = "Mads Kristensen";

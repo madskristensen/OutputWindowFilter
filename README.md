@@ -2,7 +2,7 @@
 [vsixgallery]: https://www.vsixgallery.com/extension/OutputWindowFilter.daaf649c-5187-405c-bff8-e0dd79f30573/
 [repo]:https://github.com/madskristensen/OutputWindowFilter
 
-# Scroll Tabs for Visual Studio
+# Output Window Filter for Visual Studio
 
 [![Build](https://github.com/madskristensen/ScrollTabs/actions/workflows/build.yaml/badge.svg)](https://github.com/madskristensen/ScrollTabs/actions/workflows/build.yaml)
 
