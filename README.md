@@ -1,5 +1,5 @@
 [marketplace]: https://marketplace.visualstudio.com/items?itemName=MadsKristensen.OutputWindowFilter
-[vsixgallery]: https://www.vsixgallery.com/extension/ScrollTabs.866e1c86-a800-4ca9-9da3-425e0d881b1d/
+[vsixgallery]: https://www.vsixgallery.com/extension/OutputWindowFilter.daaf649c-5187-405c-bff8-e0dd79f30573/
 [repo]:https://github.com/madskristensen/OutputWindowFilter
 
 # Scroll Tabs for Visual Studio
@@ -11,22 +11,7 @@ or get the [CI build][vsixgallery].
 
 --------------------------------------
 
-> This extension was created as a response to the Visual Studio feature request
-[Scrollable open file tabs with mouse wheel](https://developercommunity.visualstudio.com/t/Scrollable-open-file-tabs-with-mouse-whe/353560).
-
-When the mouse hovers over the document tabs and the mouse wheel is scrolled, the multi-line tabs feature is
-being toggled on and off as shown in this animation.
-
-![Multiline toggle](art/multiline.gif)
-
-When the multi-line tabs feature is enabled and you navigate to a different document within a 
-few seconds, the multi-line tabs will automatically collapse back to single-line.
-
-This behavior gives you quick access to all your open documents by using the mouse wheel.
-
-You can also move between open documents by holding the **Alt** key while scrolling the mouse wheel
-anywhere in the IDE. Scrolling down will activate the document to the right of the currently 
-open document and vice versa.
+Coming soon...
 
 ## How can I help?
 If you enjoy using the extension, please give it a ★★★★★ rating on the [Visual Studio Marketplace][marketplace].
