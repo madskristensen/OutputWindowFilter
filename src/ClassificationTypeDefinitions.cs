@@ -41,9 +41,8 @@ namespace OutputWindowFilter
         {
             public HighlightFormat()
             {
-                IsBold = true;
                 ForegroundBrush = System.Windows.Media.Brushes.White;
-                BackgroundBrush = System.Windows.Media.Brushes.SlateGray;
+                BackgroundBrush = System.Windows.Media.Brushes.DarkOrange;
             }
         }
     }
