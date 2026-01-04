@@ -1,4 +1,4 @@
-﻿using System.Runtime.InteropServices;
+using System.Runtime.InteropServices;
 
 namespace OutputWindowFilter
 {
@@ -13,12 +13,19 @@ namespace OutputWindowFilter
 
             if (args.OutValue != IntPtr.Zero)
             {
-                Marshal.GetNativeVariantForObject(Filter, args.OutValue);
+                Marshal.GetNativeVariantForObject(Filter ?? string.Empty, args.OutValue);
             }
-            else if (args.InValue is string text && text != Filter)
+            else
             {
-                Filter = text.Trim();
-                FilterChanged?.Invoke(this, Filter);
+                // Handle both null and string input values
+                string text = args.InValue as string;
+                string newFilter = text?.Trim() ?? string.Empty;
+
+                if (newFilter != Filter)
+                {
+                    Filter = newFilter;
+                    FilterChanged?.Invoke(this, Filter);
+                }
             }
         }
 

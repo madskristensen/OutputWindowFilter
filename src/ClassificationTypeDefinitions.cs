@@ -1,4 +1,5 @@
 using System.ComponentModel.Composition;
+using System.Windows.Media;
 using Microsoft.VisualStudio.Text.Classification;
 using Microsoft.VisualStudio.Utilities;
 
@@ -24,7 +25,7 @@ namespace OutputWindowFilter
             {
                 FontRenderingSize = 0.0001;
                 FontHintingSize = 0.0001;
-                ForegroundColor = System.Windows.Media.Colors.Transparent;
+                ForegroundColor = Colors.Transparent;
             }
         }
 
@@ -33,7 +34,7 @@ namespace OutputWindowFilter
         public static ClassificationTypeDefinition HighlightDefinition { get; set; }
 
         [Name(Highlight)]
-        [UserVisible(false)]
+        [UserVisible(true)]
         [Export(typeof(EditorFormatDefinition))]
         [ClassificationType(ClassificationTypeNames = Highlight)]
         [Order(Before = Priority.Default)]
@@ -41,8 +42,10 @@ namespace OutputWindowFilter
         {
             public HighlightFormat()
             {
-                ForegroundBrush = System.Windows.Media.Brushes.White;
-                BackgroundBrush = System.Windows.Media.Brushes.DarkOrange;
+                DisplayName = "Output Filter - Match Highlight";
+                // Use yellow background similar to VS find highlight - works on both light and dark themes
+                BackgroundColor = Color.FromRgb(255, 235, 0);
+                // Don't set foreground - let it inherit from the text, ensuring readability
             }
         }
     }
