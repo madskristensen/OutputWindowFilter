@@ -33,6 +33,7 @@ namespace OutputWindowFilter
         [Name(Highlight)]
         public static ClassificationTypeDefinition HighlightDefinition { get; set; }
 
+
         [Name(Highlight)]
         [UserVisible(true)]
         [Export(typeof(EditorFormatDefinition))]
@@ -43,9 +44,9 @@ namespace OutputWindowFilter
             public HighlightFormat()
             {
                 DisplayName = "Output Filter - Match Highlight";
-                // Use yellow background similar to VS find highlight - works on both light and dark themes
-                BackgroundColor = Color.FromRgb(255, 235, 0);
-                // Don't set foreground - let it inherit from the text, ensuring readability
+                // Orange background with white text - visible in both light and dark themes
+                BackgroundColor = Color.FromRgb(202, 81, 0);
+                ForegroundColor = Colors.White;
             }
         }
     }
