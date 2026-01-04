@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+using System;
+using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using Microsoft.VisualStudio.Text;
 using Microsoft.VisualStudio.Text.Classification;
@@ -32,7 +33,7 @@ namespace OutputWindowFilter
 
         public IEnumerable<ITagSpan<IClassificationTag>> GetTags(NormalizedSnapshotSpanCollection spans)
         {
-            if (string.IsNullOrEmpty(FilterCommand.Filter) || spans[0].IsEmpty)
+            if (string.IsNullOrEmpty(FilterCommand.Filter) || spans.Count == 0 || spans[0].IsEmpty)
             {
                 yield break;
             }
@@ -40,7 +41,17 @@ namespace OutputWindowFilter
             foreach (SnapshotSpan span in spans)
             {
                 string text = span.GetText();
-                MatchCollection matches = Regex.Matches(text, FilterCommand.Filter, RegexOptions.IgnoreCase);
+
+                MatchCollection matches;
+                try
+                {
+                    matches = Regex.Matches(text, FilterCommand.Filter, RegexOptions.IgnoreCase);
+                }
+                catch (ArgumentException)
+                {
+                    // Invalid regex pattern
+                    yield break;
+                }
 
                 if (matches.Count == 0)
                 {

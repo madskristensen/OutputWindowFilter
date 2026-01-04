@@ -1,4 +1,4 @@
-﻿using System.ComponentModel.Composition;
+using System.ComponentModel.Composition;
 using Microsoft.VisualStudio.Text.Classification;
 using Microsoft.VisualStudio.Utilities;
 
@@ -6,8 +6,8 @@ namespace OutputWindowFilter
 {
     public class ClassificationTypeDefinitions
     {
-        public const string Invisible = "Invisible";
-        public const string Highlight = "Highlight";
+        public const string Invisible = "OutputWindowFilter.Invisible";
+        public const string Highlight = "OutputWindowFilter.Highlight";
 
         [Export(typeof(ClassificationTypeDefinition))]
         [Name(Invisible)]
@@ -22,8 +22,8 @@ namespace OutputWindowFilter
         {
             public InvisibleFormat()
             {
-                FontRenderingSize = .00001;
-                FontHintingSize = .00001;
+                FontRenderingSize = 0.0001;
+                FontHintingSize = 0.0001;
                 ForegroundColor = System.Windows.Media.Colors.Transparent;
             }
         }
